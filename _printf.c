@@ -10,10 +10,10 @@
 int _printf(const char * const format, ...)
 {
 	va_list args;
-	int i, x = 0, chars = 0;
+	int i = 0, x = 0, chars = 0;
 
 	va_start(args, format);
-	for (i = 0; format[i] != '\0'; i++)
+	while (format && format[i] != '\0')
 	{
 		x = 0;
 		if (format[i] != '%')
@@ -37,6 +37,7 @@ int _printf(const char * const format, ...)
 			}
 		}
 		chars += x;
+		i++;
 	}
 	return (chars);
 }
