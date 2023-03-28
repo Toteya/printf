@@ -1,3 +1,3 @@
-# printf
+# printf project
 
-## Creating your own printf function
+## Creating our own printf function
