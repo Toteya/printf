@@ -35,6 +35,11 @@ int _printf(const char * const format, ...)
 					printstring("Error - no string\n");
 				i++;
 			}
+			else if(format[i + 1] != '%')
+			{
+				pchar(format[i]);
+				x++;
+			}
 		}
 		chars += x;
 		i++;
